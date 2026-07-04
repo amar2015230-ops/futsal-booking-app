@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-container">
+
+    <div class="left-panel">
+        <h1>Futsal <span>Arena</span></h1>
+        <p>
+            Booking lapangan futsal favoritmu dengan cepat,
+            mudah, dan aman.
+        </p>
+
+        <div class="feature">⚽ Booking Mudah</div>
+        <div class="feature">🛡 Aman & Terpercaya</div>
+        <div class="feature">⚡ Cepat & Praktis</div>
+    </div>
+
+    <div class="right-panel">
+        <h2>Login</h2>
+
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button class="btn-login">Login</button>
+        </form>
+
+        <div class="auth-link">
+            Belum punya akun?
+            <a href="/register">Register</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-container">
+
+    <div class="left-panel">
+        <h1>Join <span>Us</span></h1>
+        <p>
+            Buat akun untuk mulai booking lapangan futsal favoritmu.
+        </p>
+
+        <div class="feature">⚽ Banyak pilihan lapangan</div>
+        <div class="feature">💳 Pembayaran mudah</div>
+        <div class="feature">📅 Jadwal realtime</div>
+    </div>
+
+    <div class="right-panel">
+        <h2>Register</h2>
+
+        <form action="/register" method="POST">
+
+            <div class="input-group">
+                <label>Nama</label>
+                <input type="text" name="nama" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button class="btn-login">Register</button>
+
+        </form>
+
+        <div class="auth-link">
+            Sudah punya akun?
+            <a href="/login">Login</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

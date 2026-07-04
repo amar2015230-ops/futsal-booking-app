@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Lapangan</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="booking-page">
+
+<div class="booking-wrapper">
+
+    <div class="booking-left">
+        <h1>Booking Lapangan</h1>
+        <p>
+            Pilih lapangan, tentukan jadwal, lalu booking secara online
+            tanpa perlu datang langsung.
+        </p>
+
+        <div class="booking-feature">⚽ Jadwal realtime</div>
+        <div class="booking-feature">💳 Harga transparan</div>
+        <div class="booking-feature">🔥 Booking instan</div>
+    </div>
+
+    <div class="booking-card">
+        <h2>Form Booking</h2>
+
+        <form action="/booking" method="POST">
+
+            <div class="booking-group">
+                <label>Lapangan</label>
+                <select name="lapangan_id" required>
+                    <% lapangan.forEach(item => { %>
+                        <option value="<%= item.id %>">
+                            <%= item.nama_lapangan %> - Rp <%= item.harga_per_jam %>
+                        </option>
+                    <% }) %>
+                </select>
+            </div>
+
+            <div class="booking-group">
+                <label>Tanggal</label>
+                <input type="date" name="tanggal" required>
+            </div>
+
+            <div class="booking-group">
+                <label>Jam Mulai</label>
+                <input type="time" name="jam_mulai" required>
+            </div>
+
+            <div class="booking-group">
+                <label>Durasi (Jam)</label>
+                <input type="number" name="durasi" min="1" required>
+            </div>
+
+            <button class="booking-btn">Booking Sekarang</button>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
